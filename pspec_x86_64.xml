@@ -1,0 +1,91 @@
+<PISI>
+    <Source>
+        <Name>python-vte</Name>
+        <Packager>
+            <Name>Vinicius Tonon</Name>
+            <Email>viniciustonon@gmail.com</Email>
+        </Packager>
+        <License>LGPL-2.1</License>
+        <PartOf>system.devel</PartOf>
+        <Summary xml:lang="en">Python Terminal Emulator Library</Summary>
+        <Description xml:lang="en">VTE is a library (libvte) implementing a terminal emulator widget for GTK+,
+and a minimal sample application (vte) using that.  Vte is mainly used in
+gnome-terminal, but can also be used to embed a console/terminal in games,
+editors, IDEs, etc.
+
+VTE supports Unicode and character set conversion, as well as emulating any
+terminal known to the system&apos;s terminfo database.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-vte</Name>
+        <Summary xml:lang="en">Python Terminal Emulator Library</Summary>
+        <Description xml:lang="en">VTE is a library (libvte) implementing a terminal emulator widget for GTK+,
+and a minimal sample application (vte) using that.  Vte is mainly used in
+gnome-terminal, but can also be used to embed a console/terminal in games,
+editors, IDEs, etc.
+
+VTE supports Unicode and character set conversion, as well as emulating any
+terminal known to the system&apos;s terminfo database.
+</Description>
+        <PartOf>system.devel</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/gtk-2.0/vtemodule.a</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/gtk-2.0/vtemodule.so</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/python-vte/gnome-pty-helper</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/pygtk/2.0/defs/vte.defs</Path>
+            <Path fileType="data">/usr/share/vte/termcap-0.0/xterm</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-vte-devel</Name>
+        <Summary xml:lang="en">Development files for python-vte</Summary>
+        <Description xml:lang="en">VTE is a library (libvte) implementing a terminal emulator widget for GTK+,
+and a minimal sample application (vte) using that.  Vte is mainly used in
+gnome-terminal, but can also be used to embed a console/terminal in games,
+editors, IDEs, etc.
+
+VTE supports Unicode and character set conversion, as well as emulating any
+terminal known to the system&apos;s terminfo database.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">python-vte</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib64/lib*.a</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-vte-docs</Name>
+        <Summary xml:lang="en">Documentation for python-vte</Summary>
+        <Description xml:lang="en">VTE is a library (libvte) implementing a terminal emulator widget for GTK+,
+and a minimal sample application (vte) using that.  Vte is mainly used in
+gnome-terminal, but can also be used to embed a console/terminal in games,
+editors, IDEs, etc.
+
+VTE supports Unicode and character set conversion, as well as emulating any
+terminal known to the system&apos;s terminfo database.
+</Description>
+        <PartOf>programming.docs</PartOf>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc/html/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-11-28</Date>
+            <Version>1.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Vinicius Tonon</Name>
+            <Email>viniciustonon@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

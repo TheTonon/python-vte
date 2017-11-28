@@ -1,0 +1,28 @@
+name       : python-vte
+version    : 1.0
+release    : 1
+source     :
+        - https://github.com/martyr-deepin/python-vte/archive/master.zip : 5a17a34d4208eb05262728f1dc58567859d2232714175d7e0e90afc95e64eb20
+license    : LGPL-2.1
+component  : system.devel
+summary    : Python Terminal Emulator Library
+description: |
+    VTE is a library (libvte) implementing a terminal emulator widget for GTK+,
+    and a minimal sample application (vte) using that.  Vte is mainly used in
+    gnome-terminal, but can also be used to embed a console/terminal in games,
+    editors, IDEs, etc.
+
+    VTE supports Unicode and character set conversion, as well as emulating any
+    terminal known to the system's terminfo database.
+builddeps  :
+    - libvte-devel
+    - gperf
+    - gtk-doc
+setup      : |
+    ls
+    sh autogen.sh
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
